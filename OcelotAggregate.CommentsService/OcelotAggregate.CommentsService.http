@@ -1,0 +1,6 @@
+@OcelotAggregate.CommentsService_HostAddress = http://localhost:5264
+
+GET {{OcelotAggregate.CommentsService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

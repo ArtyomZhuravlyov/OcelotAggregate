@@ -1,8 +1,8 @@
-﻿namespace OcelotAggregate.Service1;
+﻿namespace OcelotAggregate.UsersService;
 
 public class User
 {
     public int Id { get; set; }
-    
+
     public required string Name { get; set; }
 }

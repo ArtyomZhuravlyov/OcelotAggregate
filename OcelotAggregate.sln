@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotAggregate.ApiGateway"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotAggregate.UsersService", "OcelotAggregate.UsersService\OcelotAggregate.UsersService.csproj", "{D61A1804-9A34-4730-B583-646CC9A7BB3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotAggregate.CommentsService", "OcelotAggregate.CommentsService\OcelotAggregate.CommentsService.csproj", "{B221B03F-9489-4F17-A91A-C18B108BBE04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D61A1804-9A34-4730-B583-646CC9A7BB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D61A1804-9A34-4730-B583-646CC9A7BB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D61A1804-9A34-4730-B583-646CC9A7BB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B221B03F-9489-4F17-A91A-C18B108BBE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B221B03F-9489-4F17-A91A-C18B108BBE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B221B03F-9489-4F17-A91A-C18B108BBE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B221B03F-9489-4F17-A91A-C18B108BBE04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
