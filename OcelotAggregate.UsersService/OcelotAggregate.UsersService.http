@@ -1,0 +1,6 @@
+@OcelotAggregate.UsersService_HostAddress = http://localhost:5227
+
+GET {{OcelotAggregate.UsersService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

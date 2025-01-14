@@ -1,0 +1,51 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/comments",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/comments",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "comments"
+    },
+    {
+      "DownstreamPathTemplate": "/users/{id}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "user"
+    }
+  ],
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/aggregatecommentuser",
+      "RouteKeys": [
+        "comments",
+        "user"
+      ],
+      "RouteKeysConfig": [
+        {
+          "RouteKey": "user",
+          "JsonPath": "$[*].userId",
+          "Parameter": "id"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003"
+  }
+}
