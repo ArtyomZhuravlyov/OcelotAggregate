@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/comments",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/comments3",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "comments",
+     "SwaggerKey": "aggregates"//,
+      //gateway
+    }]//,
+//  "Aggregates": [
+//    {
+//      "RouteKeys": [
+//        "comments"
+//      ],
+//      "Description": "Custom description for this aggregate route.",
+//      "UpstreamPathTemplate": "/gateway/api/basketwithuser/{id}"
+//    }
+//  ]
+}

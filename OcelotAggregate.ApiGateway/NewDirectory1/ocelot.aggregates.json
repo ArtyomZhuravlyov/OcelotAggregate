@@ -1,0 +1,58 @@
+{
+  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/comments",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5002
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/comments3",
+//      "UpstreamHttpMethod": [
+//        "GET"
+//      ],
+//      "Key": "comments",
+//      "SwaggerKey": "aggregates"
+//    },
+    {
+      "DownstreamPathTemplate": "/comments",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/comments4",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "user",
+      "SwaggerKey": "aggregates"
+    },
+    {
+      "DownstreamPathTemplate": "/comments",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/comments5",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "basket",
+      "SwaggerKey": "aggregates"
+    }],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "user",
+        "basket"
+      ],
+    //  "Description": "Custom description for this aggregate route.",
+      "UpstreamPathTemplate": "/basketwithuser"
+    }
+  ]
+}

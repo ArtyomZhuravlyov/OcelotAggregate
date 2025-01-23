@@ -1,7 +1,6 @@
 {
   "Routes": [
     {
-//      "TransformByOcelotConfig": true,
       "DownstreamPathTemplate": "/comments",
       "DownstreamHostAndPorts": [
         {
@@ -9,34 +8,61 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/comments3",
+      "UpstreamPathTemplate": "/comments",
       "UpstreamHttpMethod": [
         "GET"
       ],
-      "SwaggerKey": "coreAggregates"
-    }],
-  "SwaggerEndPoints": [
-    {
-      "Key": "coreAggregates",
-      "TransformByOcelotConfig": true,
-      "Config": [
-        {
-          "Name": "Core Aggregates",
-          "Version": "v1",
-           "Url": "http://localhost:5002/swagger/v1/swagger.json"
-        }
-      ]
+      "Key": "comments",
+      "SwaggerKey": "comments"
     },
     {
-      "Key": "core",
-      "TransformByOcelotConfig": false,
+      "DownstreamPathTemplate": "/users/1",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/users/1",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "Key": "user",
+      "SwaggerKey": "users"
+    }
+  ],
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/aggregatecommentuser",
+      "RouteKeys": [
+        "comments",
+        "user"
+      ]
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "users",
       "Config": [
         {
-          "Name": "Core API2",
+          "Name": "users API",
+          "Version": "v1",
+          "Url": "http://localhost:5001/swagger/v1/swagger.json"
+        }
+      ]
+    }, {
+      "Key": "comments",
+      "Config": [
+        {
+          "Name": "comments API",
           "Version": "v1",
           "Url": "http://localhost:5002/swagger/v1/swagger.json"
         }
       ]
-    }
-  ]
+    }]
+    
+    //,
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://localhost:5003"
+//  }
 }
