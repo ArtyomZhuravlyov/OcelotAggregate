@@ -10,6 +10,6 @@ public class CommentsController : ControllerBase
     [HttpGet]
     public Comment[] GetAll()
     {
-        return new Comment[] { new Comment() { Id = 1, UserId = 1 }, new Comment() { Id = 2, UserId = 2 } };
+        return new Comment[] { new Comment() { Id = 1, UserId = null }, new Comment() { Id = 2, UserId = 2 } };
     }
 }

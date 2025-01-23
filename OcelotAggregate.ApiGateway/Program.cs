@@ -8,10 +8,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Configuration
-    .AddOcelot(builder.Environment);
-//   .AddEnvironmentVariables();
+    //.AddOcelot(builder.Environment)
+    .AddJsonFile("ocelot.json")
+   .AddEnvironmentVariables();
 
 builder.Services.AddOcelot(builder.Configuration);
+builder.Services.AddSwaggerForOcelot(builder.Configuration, o => { });
 
 var app = builder.Build();
 
@@ -19,11 +21,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerForOcelotUI(opt => { });
+    //app.UseSwaggerUI();
 }
+
 
 app.UseOcelot().Wait();
 app.MapControllers();
+
 
 
 app.Run();

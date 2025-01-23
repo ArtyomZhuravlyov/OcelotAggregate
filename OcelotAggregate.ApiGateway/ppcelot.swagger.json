@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-//      "TransformByOcelotConfig": true,
+      "TransformByOcelotConfig": true,
       "DownstreamPathTemplate": "/comments",
       "DownstreamHostAndPorts": [
         {
@@ -13,26 +13,16 @@
       "UpstreamHttpMethod": [
         "GET"
       ],
-      "SwaggerKey": "coreAggregates"
+      "Key": "comments",
+      "SwaggerKey": "core"
     }],
   "SwaggerEndPoints": [
     {
-      "Key": "coreAggregates",
+      "Key": "core",
       "TransformByOcelotConfig": true,
       "Config": [
         {
-          "Name": "Core Aggregates",
-          "Version": "v1",
-           "Url": "http://localhost:5002/swagger/v1/swagger.json"
-        }
-      ]
-    },
-    {
-      "Key": "core",
-      "TransformByOcelotConfig": false,
-      "Config": [
-        {
-          "Name": "Core API2",
+          "Name": "Core API",
           "Version": "v1",
           "Url": "http://localhost:5002/swagger/v1/swagger.json"
         }
