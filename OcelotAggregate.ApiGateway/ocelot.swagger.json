@@ -1,0 +1,26 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "coreAggregates",
+      "TransformByOcelotConfig": true,
+      "Config": [
+        {
+          "Name": "Core Aggregates",
+          "Version": "v1",
+          "Url": "http://localhost:5002/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "core",
+      "TransformByOcelotConfig": false,
+      "Config": [
+        {
+          "Name": "Core API2",
+          "Version": "v1",
+          "Url": "http://localhost:5002/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

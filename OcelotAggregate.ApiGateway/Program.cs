@@ -8,8 +8,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Configuration
-    //.AddOcelot(builder.Environment)
-    .AddJsonFile("ocelot.json")
+    .AddOcelot(builder.Environment)
+    .AddJsonFile("ocelot.aggregates.json")
+    .AddJsonFile("ocelot.swagger.json")
    .AddEnvironmentVariables();
 
 builder.Services.AddOcelot(builder.Configuration);
