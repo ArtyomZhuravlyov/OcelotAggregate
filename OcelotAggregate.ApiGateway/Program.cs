@@ -3,10 +3,10 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 builder.Configuration
     .AddOcelot(builder.Environment)
     .AddJsonFile("ocelot.aggregates.json")
@@ -28,7 +28,7 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseOcelot().Wait();
-app.MapControllers();
+//app.MapControllers();
 
 
 
